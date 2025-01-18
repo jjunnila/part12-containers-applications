@@ -1,0 +1,32 @@
+The script command does work but the output is so horrible that I will clean it up a bit
+
+Script started on 2025-01-18 13:26:16+02:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="209" LINES="51"]
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+docker container ls -a
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+c6bf07419c29   ubuntu        "bash"     17 minutes ago   Exited (1) 59 seconds ago             blissful_ellis
+2bbf13d48e9a   hello-world   "/hello"   44 minutes ago   Exited (0) 44 minutes ago             tender_williamson
+docker container -i start blissful_ellis 
+root@c6bf07419c29:/# cd usr/src/app/
+root@c6bf07419c29:/usr/src/app# touch index.js
+root@c6bf07419c29:/usr/src/app# nano index.js 
+
+The following is the point where I paste the console.log('Hello World') to the file with nano and save with ctrl-o and exit with ctrl-x
+
+[?2004h[?1049h[22;0;0t[1;51r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[49;98H(B[0;7m[ Reading... ](B[m[49;104H(B[0;7m 1 line ](B[m[H(B[0;7m  GNU nano 7.2 [88bindex.js [96b [1;208H(B[m
+[50d(B[0;7m^G(B[m Help[50;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[50;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[50;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[50;188H(B[0;7m^Left(B[m Prev Word
+[51d(B[0;7m^X(B[m Exit[51;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste[51;69H(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[51;120H(B[0;7mM-6(B[m Copy[51;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[51;171H(B[0;7m^F(B[m Forward[188G(B[0;7m^Right(B[m Next Word
+[2dconsole.log((B[0;1m[35m'Hello World'[39m(B[m)
+[?12l[?25h[?25l[?12l[?25hc[?25l[?12l[?25ho[?25l[?12l[?25hn[?25l[?12l[?25hs[?25l[?12l[?25ho[?25l[?12l[?25hl[?25l[?12l[?25he[?25l[?12l[?25h.[?25l[?12l[?25hl[?25l[?12l[?25ho[?25l[?12l[?25hg[?25l[?12l[?25h([?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l
+[49d[K[?12l[?25h[2;21H[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h)[?25l[?12l[?25h
+[3d[?25l[?12l[?25h[2;27H[?25l[1;113H(B[0;7m*[208G(B[m[?12l[?25h[2;26H [?25l[?12l[?25h[2;13H'Hello World[K[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[42m [49m(B[m[K[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[K[?25lconsole.log((B[0;1m[35m'Hello World'[39m(B[m)[?12l[?25h[?25l[50;18H[28X[50;52H (B[0;7mM-D(B[m DOS Format [11b[86G [10b[103G  (B[0;7mM-A(B[m Append[42X[50;157H(B[0;7mM-B(B[m Backup File[K[51;2H(B[0;7mC(B[m Cancel[51;18H[27X[51;52H (B[0;7mM-M(B[m Mac Format [11b[86G[19X[51;105H(B[0;7mM-P(B[m Prepend [11b[51;137H[20X[51;157H(B[0;7m^T(B[m Browse[K
+[49d(B[0;7mFile Name to Write: index.js [179b [49;29H(B[m[?12l[?25h[?25l[49;97H[1K (B[0;7m[ Writing... ](B[m[K[1;113H(B[0;7m [208G(B[m[49;97H(B[0;7m[ Wrote 1 line ](B[m[50;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut [10b(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo [8b(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[50;188H(B[0;7m^Left(B[m Prev Word[51;2H(B[0;7mX(B[m Exit  [51;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste [8b(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo [8b(B[0;7mM-6(B[m Copy[51;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next [8b(B[0;7m^F(B[m Forward[188G(B[0;7m^Right(B[m Next Word[?12l[?25h[2;27H[?25l
+[49d[J[51d[?12l[?25h[51;1H[?1049l[23;0;0t
+[?1l>[?2004l[?2004h]0;root@c6bf07419c29: /usr/src/approot@c6bf07419c29:/usr/src/app# es xit
+[?2004l
+exit
+exit
+
+Script done on 2025-01-18 13:28:39+02:00 [COMMAND_EXIT_CODE="0"]
