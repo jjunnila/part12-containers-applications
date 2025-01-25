@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 router.get('/statistics', async (req, res) => {
   const number = await redis.getAsync('added_todos')
   if (!number) return res.send({"added_todos": 0})
-  res.send({"added_todos": number})
+  res.send({"added_todos": Number(number)})
 });
 
 module.exports = router;

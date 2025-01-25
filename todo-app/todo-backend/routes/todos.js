@@ -3,8 +3,6 @@ const { Todo } = require('../mongo')
 const redis = require('../redis')
 const router = express.Router();
 
-let count = 0
-
 /* GET todos listing. */
 router.get('/', async (_, res) => {
   const todos = await Todo.find({})
@@ -17,7 +15,9 @@ router.post('/', async (req, res) => {
     text: req.body.text,
     done: false
   })
-  await redis.setAsync('added_todos', ++count)
+  const count = await redis.getAsync('added_todos')
+  if (!count) await redis.setAsync('added_todos', 1)
+  else await redis.setAsync('added_todos', Number(count)+1)
   res.send(todo);
 });
 
