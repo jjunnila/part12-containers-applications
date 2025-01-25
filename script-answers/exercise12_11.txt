@@ -1,0 +1,29 @@
+Script started on 2025-01-25 17:11:58+02:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="209" LINES="51"]
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+docker exec -it todo-backend-redis-1 bash
+root@a794dab15c12:/data# redis-cli
+127.0.0.1:6379> KEYS *
+1) "added_todos"
+127.0.0.1:6379> GET "added_todos"
+"2"
+127.0.0.1:6379> SET "added_todos" "9001"
+OK
+127.0.0.1:6379> GET "added_todos"
+"9001"
+127.0.0.1:6379> GET "added_todos"
+"9002"
+127.0.0.1:6379> DEL "added_todos"
+(integer) 1
+127.0.0.1:6379> KEYS *
+(empty array)
+127.0.0.1:6379> KEYS *
+1) "added_todos"
+127.0.0.1:6379> GET "added_todos"
+"1"
+127.0.0.1:6379> exit
+root@a794dab15c12:/data# exit
+exit
+
+Script done on 2025-01-25 17:12:57+02:00 [COMMAND_EXIT_CODE="1"]
