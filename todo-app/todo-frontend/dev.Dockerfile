@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-ENV VITE_BACKEND_URL="http://127.0.0.1:3000"
+ENV VITE_BACKEND_URL="http://127.0.0.1:8080/api"
 
 # Change npm ci to npm install since we are going to be in development mode
 RUN npm install
