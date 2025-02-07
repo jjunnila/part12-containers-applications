@@ -10,11 +10,11 @@ RUN npm run test
 
 FROM node:20 AS build-stage
 
+ENV VITE_BACKEND_URL="http://127.0.0.1:8080/api"
+
 WORKDIR /usr/src/app
 
 COPY --from=test-stage /usr/src/app /usr/src/app
-
-ENV VITE_BACKEND_URL="http://127.0.0.1:3000"
 
 RUN npm run build
 
