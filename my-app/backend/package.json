@@ -1,0 +1,31 @@
+{
+  "name": "fso-phonebook-backend",
+  "version": "0.0.1",
+  "description": "Backend for part 2 phonebook",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd ../FullStackOpen/part2/Puhelinluettelo && npm run build && @powershell Copy-Item dist -Recurse ../../../FSO-Phonebook-Backend/",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "lint": "eslint ."
+  },
+  "author": "Joakim Junnila",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "fso-phonebook-backend": "file:",
+    "mongoose": "^8.7.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@stylistic/eslint-plugin-js": "^2.9.0",
+    "eslint": "^9.12.0",
+    "globals": "^15.11.0",
+    "nodemon": "^3.1.7"
+  }
+}
